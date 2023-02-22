@@ -4,11 +4,11 @@ import os
 import cv2
 
 p = 0.6   #Set here the p-cutoff
-offset = 0 # Specify the offset (the number of pixels around the object still counting as exploratory behavior)
-inter = 0 #The table with results will also specify the total exploration time up until this frame number
-base_directory = "C:/Users/emmcle/Documents/ORM/video_to_show_ORM_workshop" # Specify the directory the videos and DLC file can be found
-DLC_name = "DLC_resnet50_ORMWorkshop_Object_Recognition_MemoryOct3shuffle1_530000" # Specify the name of the DLC file (without the animal number)
-results_directory = "C:/Users/emmcle/Documents/ORM/video_to_show_ORM_workshop/results" # Specify the directory the results must be stored, this directory doesn't have to exist
+offset = 3 # Specify the offset (the number of pixels around the object still counting as exploratory behavior)
+inter = 7500 #The table with results will also specify the total exploration time up until this frame number
+base_directory = "P:\4180000.35\2019-0024-004\NOR\Videos\Round 1" # Specify the directory the videos and DLC file can be found
+DLC_name = "DLC_resnet50_NOR 2019-0024-004 Round 1Feb3shuffle1_330000" # Specify the name of the DLC file (without the animal number)
+results_directory = "P:\4180000.35\2019-0024-004\NOR\Videos\Round 1\results" # Specify the directory the results must be stored, this directory doesn't have to exist
 video_format = 'mp4' # Specify the video format 
 make_video = True # Specify if a video must be made
 
