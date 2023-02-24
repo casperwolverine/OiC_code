@@ -4,7 +4,6 @@ from shapely.geometry import Point
 from shapely.geometry.polygon import Polygon 
 import cv2 
 
-
 def inaccurate_to_na(df, p):
     """ Sets all values in the dataframe (with bodypart coordinates) lower than the p threshold to NA
 
@@ -202,13 +201,13 @@ def get_info(animal, p, offset, df, fps, coords_object1, coords_object2, video, 
     df = df.rename(columns={'coords': 'frame', 'x': 'x_nose', 'y': 'y_nose', 'likelihood': 'l_nose',
                             'x.1': 'x_center', 'y.1': 'y_center', 'likelihood.1': 'l_center'})
 
-    poly_object1_og, coords_object1_og = create_polygon(coords_object1.X, coords_object1.Y, 0)
-    poly_object2_og, coords_object2_og = create_polygon(coords_object2.X, coords_object2.Y, 0)
+    poly_object1_og, coords_object1_og = create_polygon(coords_object1.x, coords_object1.y, 0)
+    poly_object2_og, coords_object2_og = create_polygon(coords_object2.x, coords_object2.y, 0)
 
     poly_object1_scaled, coords_object1_scaled = create_polygon(
-        coords_object1.X, coords_object1.Y, offset)  
+        coords_object1.x, coords_object1.y, offset)  
     poly_object2_scaled, coords_object2_scaled = create_polygon(
-        coords_object2.X.copy(), coords_object2.Y.copy(), offset)
+        coords_object2.x.copy(), coords_object2.y.copy(), offset)
 
     df = inaccurate_to_na(df, p)
     """This bottom section calls the in_object function, and says true if in_object returns True"""
